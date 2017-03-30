@@ -22,15 +22,19 @@ public class StaticMenus {
 		StringBuilder string = new StringBuilder();
 		
 		string.append("Opcao invalida ...\n");
-		
 		system.out.println(string.toString());
 	}
 	
 	public static void getContinuarTentando(){
 		StringBuilder string = new StringBuilder();
 		
-		string.append("Deseja continuar ?\n");
-		string.append("y/n \n y to Yes n to No.");
+		string.append("             *************************\n");
+		string.append("             *   Deseja continuar ?  *\n");
+		string.append("             * y - yes 	            *\n");
+		string.append("             * n - no                *\n");
+		string.append("             *                       *\n");
+		string.append("             *                       *\n");
+		string.append("             *************************\n");
 		
 		system.out.println(string.toString());
 	}
@@ -64,8 +68,8 @@ public class StaticMenus {
 		StringBuilder string = new StringBuilder();
 		
 		string.append("**********************************************************\n");
-		string.append("*   escolha o numero da cartela  que deseja escolher    *\n");
-		string.append("*                              						    *\n");
+		string.append("*   escolha o numero da cartela  que deseja escolher     *\n");
+		string.append("*            				                *\n");
 		string.append("**********************************************************\n");
 		
 		system.out.println(string.toString());
