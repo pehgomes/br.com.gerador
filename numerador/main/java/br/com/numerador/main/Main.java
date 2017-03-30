@@ -19,13 +19,15 @@ public class Main {
 
 	private static final Scanner scanner = new Scanner(System.in);
 	
-	private static final String dataFunciona = "01/04/2017";
+	private static final String DATA_FUNCIONAMENTO = "01/04/2017";
 
 	private static Logger logger = Logger.getLogger("robot");
-
+	
+	private static Date dataFinalFuncionamento;
+	
 	private static Date dataAtual;
 
-	private static Date dataFinalFuncionamento;
+	
 
 
 	public static void main(String... args) throws ParseException {
@@ -33,13 +35,12 @@ public class Main {
 		Map<Integer, List<Integer>> mapDeCartelas =  new HashMap<>();
 		
 		dataAtual = new Date();
-		dataFinalFuncionamento = date.parse(dataFunciona);
+		dataFinalFuncionamento = date.parse(DATA_FUNCIONAMENTO);
 
 		if (dataAtual.before(dataFinalFuncionamento)) {
 			StaticMenus.getSwitchNumeros();
 			Object obj = scanner.nextLine();
 			receberParametro(obj, mapDeCartelas);
-
 		} else {
 			StaticMenus.getShowMenuVencimento();
 		}
@@ -53,11 +54,9 @@ public class Main {
 			StaticMenus.getSwitchCartelas();
 			String opc = scanner.nextLine();
 			carregarCartela(opc, mapDeCartelas);
-
 			StaticMenus.getContinuarJogando();
 			Object obj = scanner.nextLine();
 			verificarTentativa(obj);
-
 			break;
 
 		case "2":
@@ -65,7 +64,6 @@ public class Main {
 			diminuirVelocidade();
 			logger.warning("bye !");
 			break;
-
 		default:
 			StaticMenus.getOpcaoInvalida();
 			StaticMenus.getContinuarTentando();
@@ -105,31 +103,23 @@ public class Main {
 	private static void carregarCartela(String obj, Map<Integer, List<Integer>> mapDeCartelas) {
 		switch (obj) {
 		case "1":
-			exibirCartela(obj, mapDeCartelas);
-			break;
 		case "2":
-			exibirCartela(obj, mapDeCartelas);
-			break;
 		case "3":
-			exibirCartela(obj, mapDeCartelas);
-			break;
-		case "4":
+		case "4":		
 			exibirCartela(obj, mapDeCartelas);
 			break;
 		default:
 			logger.warning("Cartela invalida ...");
 			diminuirVelocidade();
-			
 			StaticMenus.getContinuarTentando();
 			Object obj1 = scanner.nextLine();
-			
 			try {
 				verificarTentativa(obj1);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
 			diminuirVelocidade();
-			logger.warning("Finalizando do gerador de numeros ...");
+			logger.warning("Finalizando gerador de numeros ...");
 			System.exit(0);
 			break;
 		}
@@ -142,17 +132,15 @@ public class Main {
 		List<Integer> cartelaQuatro = new ArrayList<>();
 		List<List<Integer>> todasAsCartelas = new ArrayList<>();
 		
-		
 		Random randon = new Random();
 		Set<Integer> numeros = new TreeSet<Integer>();
-
 		exibirCarregamento();
 		
 		int y = 1;
 		while (numeros.size() < 53) {
 			numeros.add(randon.nextInt(99));
 		}
-
+		
 		for (int valor : numeros) {
 			if (y < 14) {
 				cartelaUm.add(valor);
@@ -163,7 +151,6 @@ public class Main {
 			} else if (y >= 40 && y < 53) {
 				cartelaQuatro.add(valor);
 			}
-			
 			y++;
 		}
 		
@@ -181,7 +168,7 @@ public class Main {
 	private static void exibirCartela(String obj,Map<Integer, List<Integer>> mapDeCartelas) {
 		StringBuilder string = new StringBuilder();
 		Integer key = Integer.parseInt(obj);
-		
+
 		List<Integer> listaNumeros = mapDeCartelas.get(key);
 		System.out.println("\n cartela de nº "+obj+" selecionada");
 		
@@ -204,17 +191,14 @@ public class Main {
 	}
 	
 	private static void exibirCartelasDinamicamente(List<List<Integer>> litaCartelas, Map<Integer, List<Integer>> mapDeCartelas) {
-		
 		int x = 1;
 		for (List<Integer> cartela : litaCartelas) {
 			StringBuilder papel = new StringBuilder();
 			String registro = "Cartela de Nº "+x+ "\n";
-			
 			x++;
 			for (int valorCartela : cartela) {
 				papel.append(" * "+ valorCartela);
 			}
-			
 			exibirCartela(papel, registro);
 		}
 	}
@@ -226,7 +210,6 @@ public class Main {
 		int x = 1;
 		
 		numeros.addAll(list);
-		
 		while (numeros.size() < 51) {
 			numeros.add(randon.nextInt(99));
 		}
@@ -239,12 +222,11 @@ public class Main {
 			} else if (x == 42) {
 				papel.append("\n                  ");
 			}
-			papel.append(" * "+ valorCartela);
-			
+			papel.append(" * "+ valorCartela);	
 			x++;
 		}
 
-		exibirCartela(papel, "\n                                    50 numeros gerados ...");
+		exibirCartela(papel, "\n50 numeros gerados ...");
 	}
 	
 	private static void exibirCartela(StringBuilder folha, String registro) {
@@ -282,8 +264,8 @@ public class Main {
 	private static void diminuirVelocidade(){
 		try {
 			Thread.sleep(3000);
+			
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
