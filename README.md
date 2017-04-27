@@ -6,3 +6,6 @@ Lógica desenvolvida com base em estudos de probabilidades, gerados por meio de 
 
 # Ferramentas necessárias.
 - JDK 1.8 instalado em sua máquina 
+
+# Clonando com o GitHub
+![img1](https://github.com/PedroHenriGomes/br.com.gerador/tree/master/img/img1.png)
