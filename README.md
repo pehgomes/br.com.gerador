@@ -6,7 +6,12 @@ Lógica desenvolvida com base em estudos de probabilidades, gerados por meio de 
 
 # Ferramentas necessárias.  :alien:
 - JDK 1.8 instalado em sua máquina 
+- Git GitHub instalado.
 
-# Clonando com o GitHub
+# Clonando com o GitHub :
 ![img1](https://cloud.githubusercontent.com/assets/18149642/25498236/960be994-2b5d-11e7-86ee-fe9a7c6b3c14.png)
+
+# Clonando via browser  :
+![img2](https://cloud.githubusercontent.com/assets/18149642/25498407/3f0e62c4-2b5e-11e7-8e25-b421b2049cb2.png)
+
 
