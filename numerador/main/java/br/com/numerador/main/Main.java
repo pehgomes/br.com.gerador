@@ -19,7 +19,7 @@ public class Main {
 
 	private static final Scanner scanner = new Scanner(System.in);
 	
-	private static final String DATA_FUNCIONAMENTO = "01/04/2017";
+	private static final String DATA_FUNCIONAMENTO = "10/05/2017";
 
 	private static Logger logger = Logger.getLogger("robot");
 	
