@@ -8,4 +8,5 @@ Lógica desenvolvida com base em estudos de probabilidades, gerados por meio de 
 - JDK 1.8 instalado em sua máquina 
 
 # Clonando com o GitHub
-![Alt Text](https://github.com/PedroHenriGomes/br.com.gerador/tree/master/img/img1.png)
+![img1](https://cloud.githubusercontent.com/assets/18149642/25498236/960be994-2b5d-11e7-86ee-fe9a7c6b3c14.png)
+
