@@ -14,4 +14,8 @@ Lógica desenvolvida com base em estudos de probabilidades, gerados por meio de 
 # Clonando via browser  :
 ![img2](https://cloud.githubusercontent.com/assets/18149642/25498407/3f0e62c4-2b5e-11e7-8e25-b421b2049cb2.png)
 
+# Ou se preferir baixe os arquivos (gerador.jar) e (executarJar.bat)
+- Feito isso, coloque o arquivo .jar no Disco C:/ do seu computador.
+- Coloque o arquivo .bat no diretório de sua preferência e execute-o.
+- Depois disso, bom divertimento.
 
